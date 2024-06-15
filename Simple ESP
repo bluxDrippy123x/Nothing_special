@@ -1,25 +1,14 @@
-local Players = game:GetService("Players")
-local ESP = loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-ESP-Library-9570", true))("there are cats in your walls let them out let them out let them out")
+local esp = loadstring(game:HttpGet('https://raw.githubusercontent.com/0f76/seere_v3/main/ESP/v3_esp.lua'))()
 
---SYNAPSE ONLY
---[[
-"How do we add overrides like in kiriot's esp?"
+esp.enabled = true
 
-function ESP:GetTeamColor()
-   return Color3.new(0, 0, 1)
-end
-]]
+esp.teamcheck = false
 
-for i, Player in next, Players:GetPlayers() do
-   ESP.Object:New(ESP:GetCharacter(Player))
-   ESP:CharacterAdded(Player):Connect(function(Character)
-       ESP.Object:New(Character)
-   end)
-end
-
-Players.PlayerAdded:Connect(function(Player)
-   ESP.Object:New(ESP:GetCharacter(Player))
-   ESP:CharacterAdded(Player):Connect(function(Character)
-       ESP.Object:New(Character)
-   end)
-end)
+esp.outlines = true
+esp.shortnames = true
+esp.team_boxes = {true,Color3.fromRGB(255,255,255),Color3.fromRGB(1,1,1),0}
+esp.team_chams = {true,Color3.fromRGB(138, 139, 194),Color3.fromRGB(138, 139, 194),.25,.75,true}
+esp.team_names = {true,Color3.fromRGB(255,255,255)}
+esp.team_weapon = { true, Color3.fromRGB(255,255,255)}
+esp.team_distance = true
+esp.team_health = true
