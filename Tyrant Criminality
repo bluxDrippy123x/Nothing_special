@@ -1,0 +1,48 @@
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/vFishyTurtle/SN-Lib/main/src'))()
+local lib = Library:CreateWindow({Title = "Tyrant Hub"})
+local t1 = lib:NewTab({Name = "Aimbot"})
+t1:NewButton({
+	Name = "Aimbot",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
+	end,
+})
+local t1 = lib:NewTab({Name = "ESP"})
+t1:NewButton({
+	Name = "Name ESP",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Nothing_special/main/Name%20ESP"))()
+	end,
+})
+t1:NewButton({
+	Name = "Hitbox ESP",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Nothing_special/main/Hitbox%20ESP"))()
+	end,
+})
+t1:NewButton({
+	Name = "GTA_VI.MP4",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Nothing_special/main/GTA_V.MP4"))()
+	end,
+})
+local t1 = lib:NewTab({Name = "Fun"})
+t1:NewButton({
+	Name = "Fly",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Nothing_special/main/Fly"))()
+	end,
+})
+t1:NewButton({
+	Name = "Press F to Fly",
+	callback = function(v)
+		print("Fuck you AntiCheat 101")
+	end,
+})
+local t1 = lib:NewTab({Name = "Credits"})
+t1:NewButton({
+	Name = "Made By Ronn_q",
+	callback = function(v)
+		print("Spent me 2 hours, i was asleep lol")
+	end,
+})
