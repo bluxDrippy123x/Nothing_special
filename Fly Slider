@@ -1,0 +1,58 @@
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+local flying = false
+
+-- Fly function
+local function startFlying()
+    flying = true
+    local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+    local humanoid = character:WaitForChild("Humanoid")
+    humanoid.PlatformStand = true
+    
+    local bodyVelocity = Instance.new("BodyVelocity")
+    bodyVelocity.Velocity = Vector3.new(0, 0, 0)
+    bodyVelocity.MaxForce = Vector3.new(1000000, 1000000, 1000000)
+    bodyVelocity.Parent = character.PrimaryPart
+
+    local connection
+    connection = UserInputService.InputChanged:Connect(function(input)
+        if flying then
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                local camera = workspace.CurrentCamera
+                local lookVector = camera.CFrame.LookVector
+                bodyVelocity.Velocity = lookVector * 50
+            end
+        else
+            connection:Disconnect()
+        end
+    end)
+end
+
+-- Stop flying function
+local function stopFlying()
+    flying = false
+    local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+    local humanoid = character:WaitForChild("Humanoid")
+    humanoid.PlatformStand = false
+
+    for _, v in pairs(character.PrimaryPart:GetChildren()) do
+        if v:IsA("BodyVelocity") then
+            v:Destroy()
+        end
+    end
+end
+
+-- Toggle function
+s1:NewToggle({
+    Name = "Fly",
+    default = false,
+    callback = function(v)
+        if v then
+            startFlying()
+        else
+            stopFlying()
+        end
+        print(v)
+    end,
+})
