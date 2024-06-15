@@ -1,0 +1,67 @@
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/vFishyTurtle/SN-Lib/main/src'))()
+local lib = Library:CreateWindow({Title = "Football Noobs"})
+local t1 = lib:NewTab({Name = "Catching"})
+t1:NewButton({
+	Name = "Normal Mags",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/Normal%20Mags.txt"))()
+	end,
+})
+t1:NewButton({
+	Name = "Balant Mags",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/Balant%20Mags.txt"))()
+	end,
+})
+t1:NewButton({
+	Name = "Legit Mags",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/Legit%20Mags.txt"))()
+	end,
+})
+local t1 = lib:NewTab({Name = "Player"})
+t1:NewButton({
+	Name = "Normal Settings",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/Normal%20Jump.txt"))()
+	end,
+})
+t1:NewButton({
+	Name = "Balant Setting",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/Boost%20Jump.txt"))()
+	end,
+})
+t1:NewButton({
+	Name = "Legit Setting",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/Bomb%20Jump.txt"))()
+	end,
+})
+local t1 = lib:NewTab({Name = "Defense"})
+t1:NewButton({
+	Name = "Defense",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/AutoTackle.txt"))()
+	end,
+})
+local t1 = lib:NewTab({Name = "Quarterback"})
+t1:NewButton({
+	Name = "Enable",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/QB%20Aimbot.txt"))()
+	end,
+})
+local t1 = lib:NewTab({Name = "Troll"})
+t1:NewButton({
+	Name = "Quick TP",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/QuickTP%20Walk.txt"))()
+	end,
+})
+t1:NewButton({
+	Name = "Kneel All",
+	callback = function(v)
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/bluxDrippy123x/Football-Exploit/main/Kneel%20All.txt"))()
+	end,
+})
